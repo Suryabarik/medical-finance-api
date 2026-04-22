@@ -8,6 +8,27 @@ The system goes beyond a dashboard: it tells clinic owners **what to do next**, 
 
 ---
 
+## 🎯 Why This Problem Was Priority #1
+
+Three reasons:
+
+1. **Underserved market** — Enterprise ERP tools (SAP, Oracle) are
+   priced out of small clinic reach. No AI-native alternative exists
+   for this segment in India.
+
+2. **High stakes, bad consequences** — A clinic that misses cash flow
+   warning signs cannot pay staff or restock supplies. Wrong financial
+   decisions have immediate operational impact — not just lost revenue.
+
+3. **Data exists but isn't used** — Clinics already record invoices and
+   payments. The gap is not data collection — it is interpretation.
+   JeevanMed closes that gap in under 1 second.
+
+This is not a dashboard problem. It is a **decision-making problem**.
+Dashboards show numbers. JeevanMed tells you what to do about them.
+
+---
+
 ## 🚀 Features
 
 ### 1. Patient Management
@@ -366,6 +387,44 @@ This project is fully Cursor-ready. The `.cursorrules` file configures:
 - Prompt engineering context for finance domain
 
 Open the project root in Cursor — all agents, routes, and prompts are immediately navigable.
+
+---
+
+
+
+## 🔍 Feedback on Must Company's Agent
+
+I spent time with the agent at chat.must.company before submitting this quest.
+
+**Strengths:**
+- Handles multi-turn conversation naturally — context carries across messages
+- Response tone is clean and professional
+- Fast — no noticeable latency on simple queries
+
+**Gaps I identified:**
+
+1. **No output schema consistency** — the same question asked twice
+   returned a paragraph and a bullet list respectively. Downstream
+   systems cannot parse inconsistent formats reliably.
+
+2. **No self-evaluation layer** — there is no signal indicating whether
+   a response is high-confidence or uncertain. Users cannot distinguish
+   a reliable answer from a guess.
+
+3. **No domain grounding** — the agent is general-purpose. For
+   high-stakes domains like finance or healthcare, generic responses
+   reduce trust and increase the risk of wrong decisions.
+
+**How JeevanMed addresses each gap:**
+
+| Gap | JeevanMed's Solution |
+|-----|---------------------|
+| Inconsistent output | Strict JSON schema enforced in every response via system prompt |
+| No self-evaluation | Auto-scores every response 0–10,000 with dimension breakdown |
+| No domain grounding | Specialized to healthcare finance — severity thresholds tied to real clinic metrics |
+
+The core difference: Must's agent is a **conversation tool**.
+JeevanMed is a **decision tool** — it tells you what to do, not just what the data says.
 
 ---
 
