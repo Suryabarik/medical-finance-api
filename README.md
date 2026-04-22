@@ -1,7 +1,7 @@
 # 🏥 JeevanMed AI ERP
 
 ## 📌 Overview
-JeevanMed is an AI-powered healthcare ERP system built using FastAPI, Streamlit, and LLaMA 3.1.  
+JeevanMed is an AI-powered healthcare ERP system built using FastAPI, Streamlit, and llama-3.1-8b-instant.  
 It manages patients, invoices, transactions, and financial analytics — with an AI Decision Engine that converts raw financial data into prioritized, actionable decisions.
 
 The system goes beyond a dashboard: it tells clinic owners **what to do next**, not just what the numbers are.
@@ -89,7 +89,7 @@ Three metrics calculated before the LLM is called:
 - `partial_ratio` = partial / total invoices
 
 ### Step 3 — LLM Decision Engine
-Metrics sent to LLaMA 3.1 (via Groq) with a strict system prompt that enforces:
+Metrics sent to llama-3.1-8b-instant (via Groq) with a strict system prompt that enforces:
 - Severity thresholds tied to actual values
 - 2–4 decisions minimum, each addressing a different issue
 - Confidence reduction for small sample sizes (n < 10)
@@ -206,7 +206,7 @@ Input: 5 invoices, ₹13,513 revenue, ₹2,399 pending
 | Layer | Technology |
 |-------|-----------|
 | Backend | FastAPI + SQLAlchemy |
-| AI Model | LLaMA 3.1 8B via Groq API |
+| AI Model | llama-3.1-8b-instant via Groq API |
 | Frontend | Streamlit |
 | Auth | JWT (python-jose) |
 | Evaluation | Custom 5-dimension scorer |
