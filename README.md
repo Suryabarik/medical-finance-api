@@ -431,4 +431,4 @@ JeevanMed is a **decision tool** — it tells you what to do, not just what the 
 ## 🧑‍💻 Author
 
 **Suryakanta Barik**  
-Python Developer | Backend | AI/ML
+Python Developer | Backend | AI/ML | Generative Ai
