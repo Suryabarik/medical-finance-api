@@ -1,0 +1,5 @@
+- Use agents/ as AI decision layer
+- Keep backend logic separate from AI logic
+- Prefer modular and scalable architecture
+- Use LLM only inside agents
+- Avoid hardcoding sensitive data

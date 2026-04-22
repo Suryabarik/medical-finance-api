@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "test_case": "Critical cash flow crisis",
+      "expected_severity": "CRITICAL",
+      "agent_score": 10000,
+      "vanilla_score": 500,
+      "delta": 9500,
+      "agent_latency": 1.449
+    },
+    {
+      "test_case": "Healthy clinic",
+      "expected_severity": "LOW",
+      "agent_score": 10000,
+      "vanilla_score": 0,
+      "delta": 10000,
+      "agent_latency": 0.857
+    },
+    {
+      "test_case": "High partial payments",
+      "expected_severity": "HIGH",
+      "agent_score": 8800,
+      "vanilla_score": 0,
+      "delta": 8800,
+      "agent_latency": 0.792
+    },
+    {
+      "test_case": "Zero revenue edge case",
+      "expected_severity": "INSUFFICIENT",
+      "agent_score": 9700,
+      "vanilla_score": 0,
+      "delta": 9700,
+      "agent_latency": 0.441
+    },
+    {
+      "test_case": "All invoices unpaid",
+      "expected_severity": "CRITICAL",
+      "agent_score": 10000,
+      "vanilla_score": 500,
+      "delta": 9500,
+      "agent_latency": 0.594
+    }
+  ],
+  "summary": {
+    "avg_agent_score": 9700,
+    "avg_vanilla_score": 200,
+    "improvement": 9500,
+    "avg_latency_seconds": 0.827
+  }
+}
